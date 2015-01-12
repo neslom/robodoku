@@ -67,16 +67,15 @@ class SolverTest < MiniTest::Test
 	def test_row_with_entire_range_is_complete
 		solver.grid[0] = [1, 2, 3, 4, 6, 5, 7, 8, 9].shuffle
 		assert solver.row_complete?(0)
-	end
+  end
 
 	def test_row_without_entire_range_is_not_complete
-		solver.grid[1] = 
 		solver.grid[3] = [1, 1, 1, 1, 1, 1, 1, 1, 1]
-		refute solver.row_complete?(1)
 		refute solver.row_complete?(3)
 	end
 
 	def test_if_each_row_is_complete_game_is_over
+    skip
 		solver.grid.map do |row|
 			row = complete_row
 		end
