@@ -46,8 +46,10 @@ class Solver
     ([1, 2, 3, 4, 5, 6, 7, 8, 9] - grid[row_number]).empty?
   end
 
-  def column_definer
-    grid[0][0]    
+  def column_definer(column_number)
+    grid.map do |row|
+      row[column_number]  
+    end
   end
 
 #  def puzzle_complete?

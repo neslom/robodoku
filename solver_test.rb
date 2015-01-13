@@ -81,4 +81,16 @@ class SolverTest < MiniTest::Test
 		end
 		assert solver.puzzle_complete?
 	end
+
+  def test_makes_columns
+   solver.grid.map! do |row|
+    row = complete_row
+   end
+  assert_equal [2, 2, 2, 2, 2, 2, 2, 2, 2], solver.column_definer(1) 
+  refute_equal [2, 2, 2, 2, 2, 2, 2, 2, 2], solver.column_definer(2)
+  end
+
+  def test_it_can_solve_puzzle_missing_one_spot
+    
+  end
 end
