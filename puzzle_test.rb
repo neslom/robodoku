@@ -6,8 +6,6 @@ class PuzzleTest < MiniTest::Test
   attr_reader :puzzle
   def setup
     @puzzle = Puzzle.new("puzzle0.txt")
-    @puzzle.board_generator 
-    @puzzle.row_generator
   end
 
   def test_it_exists
@@ -15,10 +13,7 @@ class PuzzleTest < MiniTest::Test
   end
 
   def test_puts_incoming_board_into_array
-    assert_equal [83921657], puzzle.board_generator[0]
-  end
-
-  def test_each_array_is_treated_as_a_row
-    assert_equal [83921657], puzzle.rows[0]
+    assert_equal [0, 8, 3, 9, 2, 1, 6, 5, 7], puzzle.board[0]
+    assert_equal [6, 9, 5, 4, 1, 7, 3, 8, 2], puzzle.board[8]
   end
 end
