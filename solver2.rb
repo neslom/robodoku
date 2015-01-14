@@ -6,24 +6,10 @@ class Solver
     @puzzle = Puzzle.new("puzzle0.txt")
     @complete_range = (1..9).to_a
   end
-  #def assigns_spot_to_empty_space
-  #@puzzle.board.map.with_index do |line, rowindex|
-  #line.each_with_index do |spot, index|
-  #if spot == 0
-  #line[index] = Spot.new(rowindex, index)
-  #end
-  #end
-  #end
-  #end
-  # if find a zero and row has multiple zeros, then must compare to
-  # the column
-  def return_row
+
+  def puzzle_string 
     puzzle.board
   end
-
-  #def missing_spot_count
-    #return.row
-  #end
 
   def solve_one_spot_missing
     return_row.map do |line|
@@ -37,14 +23,12 @@ class Solver
       end
     end
   end
-end
 
-class Spot
-  def initialize(rowindex, spotindex)
-    @rowindex = rowindex
-    @spotindex = spotindex
+  def group_by_number
+    puzzle_string.chars.group_by { |each| each }
   end
 end
 
-s = Solver.new
-p s.return_row
+ #hash.keys.sort.map do |key|
+   #p "#{key} -> #{hash[key].count}"
+ #end
