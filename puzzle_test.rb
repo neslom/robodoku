@@ -23,7 +23,6 @@ class PuzzleTest < MiniTest::Test
   end
 
   def test_it_makes_a_column
-    puzzle.column_maker
     assert_equal [" ", "9", "2", "5", "7", "1", "3", "8", "6"], puzzle.column[0]
   end
 end

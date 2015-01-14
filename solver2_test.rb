@@ -11,8 +11,5 @@ class SolverTest < MiniTest::Test
     assert solver 
   end
 
-  def test_puzzle_size_is_correct
-    assert_equal 81, solver.puzzle_string.length
-    refute_equal 80, solver.puzzle_string.length
-  end
+
 end
