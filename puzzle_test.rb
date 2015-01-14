@@ -5,7 +5,7 @@ require './puzzle'
 class PuzzleTest < MiniTest::Test
   attr_reader :puzzle
   def setup
-    @puzzle = Puzzle.new("puzzle0.txt")
+    @puzzle = Puzzle.new("puzzle_one_missing.txt")
   end
 
   def test_it_exists

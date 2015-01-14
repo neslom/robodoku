@@ -1,7 +1,7 @@
 require 'pry'
 class Puzzle
-  attr_accessor :board, :row, :column
-  def initialize(file)
+  attr_accessor :board, :row, :column, :file
+  def initialize(file="puzzle_one_missing.txt")
     @file = file
     @row = []
     @column = []
