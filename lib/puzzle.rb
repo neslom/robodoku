@@ -1,7 +1,7 @@
 require 'pry'
 class Puzzle
   attr_accessor :board, :row, :column, :file
-  def initialize(file="puzzle_one_missing.txt")
+  def initialize(file="./test/support/puzzle_one_missing.txt")
     @file = file
     @row = []
     @column = []
@@ -27,9 +27,3 @@ class Puzzle
   def square_maker
   end
 end
-
-#b = Puzzle.new("puzzle0.txt")
-#p b.board
-
-
-

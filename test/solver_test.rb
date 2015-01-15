@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './solver'
+require './lib/solver'
 
 class SolverTest < MiniTest::Test
 	attr_reader :solver, :complete_row
@@ -74,23 +74,11 @@ class SolverTest < MiniTest::Test
 		refute solver.row_complete?(3)
 	end
 
-	def test_if_each_row_is_complete_game_is_over
-    skip
-		solver.grid.map do |row|
-			row = complete_row
-		end
-		assert solver.puzzle_complete?
-	end
-
   def test_makes_columns
    solver.grid.map! do |row|
     row = complete_row
    end
   assert_equal [2, 2, 2, 2, 2, 2, 2, 2, 2], solver.column_definer(1) 
   refute_equal [2, 2, 2, 2, 2, 2, 2, 2, 2], solver.column_definer(2)
-  end
-
-  def test_it_can_solve_puzzle_missing_one_spot
-    
   end
 end

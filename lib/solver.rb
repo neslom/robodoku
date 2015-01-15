@@ -51,33 +51,4 @@ class Solver
       row[column_number]  
     end
   end
-
-#  def puzzle_complete?
-#    counter = 0
-#    grid.each_with_index do |row, index|
-#      if row_complete?(index)
-#        counter += 1
-#      end
-#      if counter == 9
-#        true
-#      else
-#        false
-#      end
-#    end
-#  end
-  
 end
-
-
-
-@row = [
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  [1, 2, 3, 4, 5, 6, 7, 8, 9]
-]

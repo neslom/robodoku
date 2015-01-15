@@ -1,11 +1,11 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './puzzle'
+require './lib/puzzle'
 
 class PuzzleTest < MiniTest::Test
   attr_reader :puzzle
   def setup
-    @puzzle = Puzzle.new("puzzle_one_missing.txt")
+    @puzzle = Puzzle.new("./test/support/puzzle_one_missing.txt")
   end
 
   def test_it_exists
